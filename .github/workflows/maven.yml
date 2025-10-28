@@ -31,8 +31,8 @@ jobs:
       - name: Build (skip tests)
         run: mvn -B -DskipTests package
 
-      - name: Run tests
-        run: mvn -B test
+      - name: Run shell script test
+        run: chmod +x test_percy_wait.sh && ./test_percy_wait.sh
         env:
           CI: true
 
