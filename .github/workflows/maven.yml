@@ -28,6 +28,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-m2-
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install Percy CLI
+        run: |
+          npm install -g @percy/cli
+          percy --version
+
       - name: Build (skip tests)
         run: mvn -B -DskipTests package
 
@@ -35,6 +46,9 @@ jobs:
         run: chmod +x test_percy_wait.sh && ./test_percy_wait.sh
         env:
           CI: true
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
 
       - name: Upload Surefire reports
         if: always()

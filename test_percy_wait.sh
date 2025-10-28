@@ -2,9 +2,22 @@
 
 echo "=== Percy Wait and Approve Test Script ==="
 echo "Setting up Percy token and BrowserStack credentials..."
-export PERCY_TOKEN=web_3b46e33edc1e59085cc5baa509b3e51b22c0ad6ff33552f16ff80bebedd71729
-export BROWSERSTACK_USERNAME=tarunramiredddy_opM4Wv
-export BROWSERSTACK_ACCESS_KEY=iAroSrEzrrykRF6sbmxA
+
+# Check if environment variables are set, otherwise use defaults for local testing
+if [ -z "$PERCY_TOKEN" ]; then
+    echo "Warning: PERCY_TOKEN not set in environment, using local default"
+    export PERCY_TOKEN=web_3b46e33edc1e59085cc5baa509b3e51b22c0ad6ff33552f16ff80bebedd71729
+fi
+
+if [ -z "$BROWSERSTACK_USERNAME" ]; then
+    echo "Warning: BROWSERSTACK_USERNAME not set in environment, using local default"
+    export BROWSERSTACK_USERNAME=tarunramiredddy_opM4Wv
+fi
+
+if [ -z "$BROWSERSTACK_ACCESS_KEY" ]; then
+    echo "Warning: BROWSERSTACK_ACCESS_KEY not set in environment, using local default"
+    export BROWSERSTACK_ACCESS_KEY=iAroSrEzrrykRF6sbmxA
+fi
 
 # Function to extract build ID from output
 extract_build_id() {
