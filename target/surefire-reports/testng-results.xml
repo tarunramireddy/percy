@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-28T15:36:37 EDT" name="PercyVisualSuite-Test2" finished-at="2025-10-28T15:36:43 EDT" duration-ms="5387">
+    <groups>
+    </groups>
+    <test started-at="2025-10-28T15:36:37 EDT" name="Test2" finished-at="2025-10-28T15:36:43 EDT" duration-ms="5387">
+      <class name="com.example.percy.Test2">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.percy.Test2@7b227d8d]" started-at="2025-10-28T15:36:37 EDT" name="setUp" finished-at="2025-10-28T15:36:39 EDT" duration-ms="1347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openFacebookHomePage()[pri:0, instance:com.example.percy.Test2@7b227d8d]" started-at="2025-10-28T15:36:39 EDT" name="openFacebookHomePage" finished-at="2025-10-28T15:36:43 EDT" duration-ms="3921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openFacebookHomePage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.percy.Test2@7b227d8d]" started-at="2025-10-28T15:36:43 EDT" name="tearDown" finished-at="2025-10-28T15:36:43 EDT" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.percy.Test2 -->
+    </test> <!-- Test2 -->
+  </suite> <!-- PercyVisualSuite-Test2 -->
+</testng-results>
