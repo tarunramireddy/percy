@@ -6,7 +6,7 @@ echo "Setting up Percy token and BrowserStack credentials..."
 # Check if environment variables are set, otherwise use defaults for local testing
 if [ -z "$PERCY_TOKEN" ]; then
     echo "Warning: PERCY_TOKEN not set in environment, using local default"
-    export PERCY_TOKEN=web_3b46e33edc1e59085cc5baa509b3e51b22c0ad6ff33552f16ff80bebedd71729
+    export PERCY_TOKEN=web_c9cb1c67cd7374b832464681299bbb07711525b7d35666fd7933e00736ff2db6
 fi
 
 if [ -z "$BROWSERSTACK_USERNAME" ]; then
